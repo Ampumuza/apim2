@@ -406,6 +406,7 @@
 					"path": [
 						"brs",
 						"1.0.0",
+						"1.0.0",
 						"entity",
 						"get_attachment_list",
 						"{{no}}",
