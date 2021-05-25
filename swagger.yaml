@@ -73,7 +73,7 @@ x-wso2-sandbox-endpoints:
   urls:
     - 'https://apitest.ursb.go.ug/test00/api/'
   type: http
-x-wso2-basePath: /brs/1.0.0
+x-wso2-basePath: /brs
 x-wso2-transports:
   - http
   - https
