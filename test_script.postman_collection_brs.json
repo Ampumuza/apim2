@@ -398,7 +398,7 @@
 				"header": [],
 				"url": {
 					"raw": "https://{{baseUrl}}:8243/brs/1.0.0/1.0.0/entity/get_attachment_list/{no}/{Key}",
-					"protocol": "http",
+					"protocol": "https",
 					"host": [
 						"{{baseUrl}}"
 					],
