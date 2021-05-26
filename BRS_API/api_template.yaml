@@ -1,0 +1,16 @@
+id:
+  providerName: admin
+  version: 1.0.0
+  apiName: BRS_API
+context: brs/1.0.0
+contextTemplate: /brs-api/{version}
+description: This is the complete BRS API replica
+type: HTTP
+availableTiers:
+  - name: Unlimited
+  - name: Gold
+status: published
+visibility: public
+transports: http,https
+productionUrl: http://localhost:8080
+sandboxUrl: http://localhost:8081

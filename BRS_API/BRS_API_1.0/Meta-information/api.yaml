@@ -1,0 +1,37 @@
+id:
+  providerName: admin
+  apiName: BRS_API
+  version: 1.0.0
+description: This is the complete BRS API replica
+type: HTTP
+context: brs/1.0.0
+contextTemplate: /brs-api/{version}
+availableTiers:
+- name: Unlimited
+- name: Gold
+status: published
+visibility: public
+transports: http,https
+corsConfiguration:
+  corsConfigurationEnabled: true
+  accessControlAllowOrigins:
+  - '*'
+  accessControlAllowHeaders:
+  - authorization
+  - Access-Control-Allow-Origin
+  - Content-Type
+  - SOAPAction
+  - apikey
+  - testKey
+  accessControlAllowMethods:
+  - GET
+  - PUT
+  - POST
+  - DELETE
+  - PATCH
+  - OPTIONS
+productionUrl: http://localhost:8080
+sandboxUrl: http://localhost:8081
+endpointConfig: '{"endpoint_type":"http","production_endpoints":{"url":"https://apitest.ursb.go.ug/test00/api/"},"sandbox_endpoints":{"url":"https://apitest.ursb.go.ug/test00/api/"}}'
+isDefaultVersion: true
+enableStore: true

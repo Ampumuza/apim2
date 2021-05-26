@@ -1,0 +1,338 @@
+openapi: 3.0.1
+info:
+  title: BRS-API
+  version: 1.0.0
+servers:
+  - url: /
+security:
+  - default: []
+paths:
+  '/entity/get_entity_list/{from}/{to}/{institution}':
+    get:
+      description: Get list of the entities for the specified time period
+      parameters:
+        - name: from
+          in: path
+          description: Period start date of entity registration/incorporation
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: to
+          in: path
+          description: Period end date of entity registration/incorporation
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: institution
+          in: path
+          description: External institution Unique ID issued by BRS
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  '/entity/get_entity_minimum/{registration_no}/{old_registration_no}/{institution}':
+    get:
+      description: Get minimum data set for a specific entity
+      parameters:
+        - name: registration_no
+          in: path
+          description: Entity registration number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: old_registration_no
+          in: path
+          description: Previous entity registration number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: institution
+          in: path
+          description: External institution Unique ID issued by BRS
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  '/entity/get_entity_full/{registration_no}/{old_registration_no}/{institution}':
+    get:
+      description: Get full data set for a specific entity
+      parameters:
+        - name: registration_no
+          in: path
+          description: Entity registration number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: old_registration_no
+          in: path
+          description: Previous entity registration number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: institution
+          in: path
+          description: External institution Unique ID issued by BRS
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  '/entity/get_attachment_list/{registration_no}/{institution}':
+    get:
+      description: Get list of all available attachments for a specific entity
+      parameters:
+        - name: registration_no
+          in: path
+          description: Entity registration number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: institution
+          in: path
+          description: External institution Unique ID issued by BRS
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  '/entity/get_attachment/{registration_no}/{attachment_id}/{institution}':
+    get:
+      description: Download specific attachment
+      parameters:
+        - name: registration_no
+          in: path
+          description: Entity registration number
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: attachment_id
+          in: path
+          description: Attachment ID
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: institution
+          in: path
+          description: External institution Unique ID issued by BRS
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  '/search/get_name_similarity/{entity_name}/{institution}':
+    get:
+      description: Get list of similar names for the specified name
+      parameters:
+        - name: entity_name
+          in: path
+          description: Entity name you are searching for
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: institution
+          in: path
+          description: External institution Unique ID issued by BRS
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  '/classifier/get_classifier_list/{institution}':
+    get:
+      parameters:
+        - name: institution
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+  '/classifier/get_classifier/{domain}/{institution}':
+    get:
+      parameters:
+        - name: domain
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+        - name: institution
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+            format: string
+      responses:
+        '200':
+          description: ok
+      security:
+        - default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+      x-wso2-application-security:
+        security-types:
+          - oauth2
+        optional: false
+components:
+  securitySchemes:
+    default:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: ''
+          scopes: {}
+x-wso2-auth-header: Authorization
+x-wso2-cors:
+  corsConfigurationEnabled: false
+  accessControlAllowOrigins:
+    - '*'
+  accessControlAllowCredentials: false
+  accessControlAllowHeaders:
+    - authorization
+    - Access-Control-Allow-Origin
+    - Content-Type
+    - SOAPAction
+    - apikey
+    - testKey
+  accessControlAllowMethods:
+    - GET
+    - PUT
+    - POST
+    - DELETE
+    - PATCH
+    - OPTIONS
+x-wso2-production-endpoints:
+  urls:
+    - 'https://apitest.ursb.go.ug/test00/api/'
+  type: http
+x-wso2-sandbox-endpoints:
+  urls:
+    - 'https://apitest.ursb.go.ug/test00/api/'
+  type: http
+x-wso2-basePath: /brs-api/1.0.0
+x-wso2-transports:
+  - http
+  - https
+x-wso2-response-cache:
+  enabled: false
+  cacheTimeoutInSeconds: 300
