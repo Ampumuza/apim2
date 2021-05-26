@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "58dd2c45-a5e8-4056-aa9f-8c94825aec2a",
-		"name": "APIM BRS Demo API",
+		"name": "APIM BRS Complete Replica API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -366,7 +366,7 @@
 					"script": {
 						"exec": [							
 							"pm.test(\"Success Get Entity test. Status code is 200\", function () {",
-							"pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -425,7 +425,7 @@
 					"script": {
 						"exec": [							
 							"pm.test(\"Success Get Entity Minimum test. Status code is 200\", function () {",
-							"pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -484,7 +484,7 @@
 					"script": {
 						"exec": [							
 							"pm.test(\"Success Get Entity Full test. Status code is 200\", function () {",
-							"pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -543,7 +543,7 @@
 					"script": {
 						"exec": [							
 							"pm.test(\"Success Get Attachment test. Status code is 200\", function () {",
-							"pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -601,7 +601,7 @@
 					"script": {
 						"exec": [							
 							"pm.test(\"Success Get Attachment test. Status code is 200\", function () {",
-							"pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -660,7 +660,7 @@
 					"script": {
 						"exec": [							
 							"pm.test(\"Success Get Name Similarity test. Status code is 200\", function () {",
-							"pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -718,7 +718,7 @@
 					"script": {
 						"exec": [							
 							"pm.test(\"Success Get Classifier List test. Status code is 200\", function () {",
-							"pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
@@ -775,7 +775,7 @@
 					"script": {
 						"exec": [							
 							"pm.test(\"Success Get Classifier test. Status code is 200\", function () {",
-							"pm.response.to.have.status(200);",
+							"    pm.response.to.have.status(200);",
 							"});"
 						],
 						"type": "text/javascript"
