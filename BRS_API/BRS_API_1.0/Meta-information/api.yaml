@@ -4,7 +4,7 @@ id:
   version: 1.0.0
 description: This is the complete BRS API replica
 type: HTTP
-context: brs/1.0.0
+context: /brs/1.0.0
 contextTemplate: /brs-api/{version}
 availableTiers:
 - name: Unlimited
